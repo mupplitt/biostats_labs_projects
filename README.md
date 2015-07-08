@@ -44,23 +44,25 @@ Results
 Outputs of the linear regression model in R:
 
 Coefficients:
-
+	Estimate	Std. Error	t value	Pr(>|t|) 
+(Intercept)	2799.985	248.971	11.246	<2e-16
+LWT	3.934	1.704	2.308	0.022107
+RACEFACTOR3	-504.648	153.078	-3.297	0.001174
+RACEFACTOR3	-396.775	117.799	-3.368	0.000921
+SMOKEFACTOR1	-398.29	108.481	-3.672	0.000316
 
 
 My primary value of interest here is the p-values. In all cases, the calculated p-values were well below my stated alpha level of .05.
 
 To visually compare the differences in birth weight between the women classified as smokers vs non-smokers specifically, I constructed a box plot in R.
 
-
-
-
-
-
-
 Output of the Tukey HSD at a 95% confidence level:
 
-
-
+$RACEFACTOR		
+diff	lwr	upr	p adj
+2-1	-384.04728	-743.4465	0.03309
+3-1	-299.72466	-558.5104	0.01861
+3-2	84.32262	-291.2872	0.8565
 
 The outputs of the Tukey test compare the effects on birth weight of each of the race groups against each other. The first row compares Race 1 (“white”) to Race 2 (“black”), the second row compares Race 1 (“white”) to Race 3 (“other, non-white”), and the third row compares Race 2 (“black”) to Race 3 (“other, non-white.” I again used the p-value outputs to determine whether or not the race of the mother had a significant effect on birth weight.
 
