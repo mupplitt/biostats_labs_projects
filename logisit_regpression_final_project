@@ -1,0 +1,7 @@
+plot(SMOKE~BWT, data=lowbwt)
+glm.lowbwt = glm(SMOKE ~ BWT, family=binomial(logit), data=lowbwt)
+summary(glm.lowbwt)
+plot(SMOKE~BWT, data=lowbwt)
+plot(glm.lowbwt)
+
+abline(SMOKE~BWT)
